@@ -77,9 +77,6 @@ if ($RankingType == 'all') {
           <li class="nav-item">
             <a class="nav-link <?php echo $RankingType == 'all' ? "active" : ""; ?>" href="?type=all"><?php echo $i18n['all-ranking']; ?></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/arcxingye/EatKano/"><?php echo $i18n['source-code']; ?></a>
-          </li>
         </ul>
         <form class="d-flex text-nowrap" action="" onsubmit="return func()">
           <input class="form-control me-2" id="search" placeholder="<?php echo $i18n['query-input']; ?>">
