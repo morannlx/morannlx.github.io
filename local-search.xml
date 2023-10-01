@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/10/01/hello-world/"/>
+    <url>/2023/10/01/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git clone指定tag代码</title>
+    <link href="/2023/06/23/git%20clone%E6%8C%87%E5%AE%9Atag%E4%BB%A3%E7%A0%81/"/>
+    <url>/2023/06/23/git%20clone%E6%8C%87%E5%AE%9Atag%E4%BB%A3%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<p>如果你想使用 Git 克隆仓库并且只想检出某个特定的标签，你可以在克隆命令后面加上一个 <code>--branch</code> 参数，并指定你想要检出的标签名称：</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">&lt;repository</span>&gt; --branch <span class="hljs-tag">&lt;tag_name&gt;</span><br></code></pre></td></tr></table></figure><p>例如，如果你想克隆仓库 [<a href="https://github.com/4accccc/vivo-Magisk-Delta-suu.git]">https://github.com/4accccc/vivo-Magisk-Delta-suu.git]</a> 并且检出标签名为 v1.0.0 的代码，你可以使用以下命令：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/user/</span>repo.git --branch v1.<span class="hljs-number">0.0</span><br></code></pre></td></tr></table></figure><p>这样 Git 会克隆仓库并且直接检出 v1.0.0 标签对应的代码。</p><p>注意：如果你在克隆仓库时指定了一个不存在的标签名，Git 会报错，并且不会克隆仓库。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>成长记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>干货</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在博客页脚添加一个运行天数</title>
+    <link href="/2023/06/23/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E8%BF%90%E8%A1%8C%E5%A4%A9%E6%95%B0/"/>
+    <url>/2023/06/23/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E8%BF%90%E8%A1%8C%E5%A4%A9%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p>感觉自己博客有点简洁(简陋)，所以在页脚添加一个运行天数试图挽救</p><p>本博客使用的主题为Fluid，其他主题不保证可行</p><p>首先在博客目录下进入 <code>/source</code>，然后新建一个 <code>js</code>文件夹，进入js文件夹新建 <code>runningday.js</code></p><p>编辑 <code>runningday.js</code>并保存</p><p><img src="/images/images/runningday.jpg"></p><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs arcade">!(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">/** 计时起始时间，自行修改 **/</span><br>  <span class="hljs-keyword">var</span> start = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&quot;2023/06/22 00:00:00&quot;</span>);<br><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">update</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> <span class="hljs-built_in">now</span> = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();<br>    <span class="hljs-built_in">now</span>.setTime(<span class="hljs-built_in">now</span>.getTime()+<span class="hljs-number">250</span>);<br>    days = (<span class="hljs-built_in">now</span> - start) / <span class="hljs-number">1000</span> / <span class="hljs-number">60</span> / <span class="hljs-number">60</span> / <span class="hljs-number">24</span>;<br>    dnum = Math.<span class="hljs-built_in">floor</span>(days);<br>    hours = (<span class="hljs-built_in">now</span> - start) / <span class="hljs-number">1000</span> / <span class="hljs-number">60</span> / <span class="hljs-number">60</span> - (<span class="hljs-number">24</span> * dnum);<br>    hnum = Math.<span class="hljs-built_in">floor</span>(hours);<br>    <span class="hljs-keyword">if</span>(String(hnum).<span class="hljs-built_in">length</span> === <span class="hljs-number">1</span> )&#123;<br>      hnum = <span class="hljs-string">&quot;0&quot;</span> + hnum;<br>    &#125;<br>    minutes = (<span class="hljs-built_in">now</span> - start) / <span class="hljs-number">1000</span> /<span class="hljs-number">60</span> - (<span class="hljs-number">24</span> * <span class="hljs-number">60</span> * dnum) - (<span class="hljs-number">60</span> * hnum);<br>    mnum = Math.<span class="hljs-built_in">floor</span>(minutes);<br>    <span class="hljs-keyword">if</span>(String(mnum).<span class="hljs-built_in">length</span> === <span class="hljs-number">1</span> )&#123;<br>      mnum = <span class="hljs-string">&quot;0&quot;</span> + mnum;<br>    &#125;<br>    seconds = (<span class="hljs-built_in">now</span> - start) / <span class="hljs-number">1000</span> - (<span class="hljs-number">24</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * dnum) - (<span class="hljs-number">60</span> * <span class="hljs-number">60</span> * hnum) - (<span class="hljs-number">60</span> * mnum);<br>    snum = Math.<span class="hljs-built_in">round</span>(seconds);<br>    <span class="hljs-keyword">if</span>(String(snum).<span class="hljs-built_in">length</span> === <span class="hljs-number">1</span> )&#123;<br>      snum = <span class="hljs-string">&quot;0&quot;</span> + snum;<br>    &#125;<br>    document.getElementById(<span class="hljs-string">&quot;timeDate&quot;</span>).innerHTML = <span class="hljs-string">&quot;运行天数&amp;nbsp&quot;</span>+dnum+<span class="hljs-string">&quot;&amp;nbsp天&quot;</span>;<br>  &#125;<br><br>  update();<br>  setInterval(update, <span class="hljs-number">1000</span>);<br>&#125;)();<br></code></pre></td></tr></table></figure><p>然后编辑博客目录下的 <code>_config.fluid.yml</code><img src="/images/images/runningday1.jpg"></p><p>在 <code>431</code>行中添加</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 0.85rem&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;timeDate&quot;</span>&gt;</span>载入天数...<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/js/runningday.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure><p>保存并部署就可以了</p><p>方法借鉴自(<a href="https://hyh1370039199.gitee.io/post/2/#:~:text=Hexo-Fluid%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96-%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%97%B6%E9%95%BF%202022-07-30%20%E6%8A%80%E6%9C%AF%20Fluid,1.8.4%E7%89%88%E6%9C%AC%E4%BB%A5%E4%B8%8A%E6%94%AF%E6%8C%81%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E8%84%9A%E5%86%85%E5%AE%B9%E3%80%82%20%E9%9C%80%E8%A6%81%E5%9C%A8%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B8%AD%E7%9A%84%20footer%EF%BC%9Acontent%20%E6%B7%BB%E5%8A%A0%EF%BC%9A">Hexo-Fluid 主题美化 - 添加网站运行时长 | Blog (gitee.io)</a>)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>成长记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>干货</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Markdown---简单易用的标记语言</title>
+    <link href="/2023/06/22/Markdown---%E7%AE%80%E5%8D%95%E6%98%93%E7%94%A8%E7%9A%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
+    <url>/2023/06/22/Markdown---%E7%AE%80%E5%8D%95%E6%98%93%E7%94%A8%E7%9A%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/</url>
+    
+    <content type="html"><![CDATA[<p>Markdown是一种广泛应用的标记语言，大部分blog都会采用markdown，但是像我这种记忆力不太好的人，只能记录在博客当中方便查看。</p><h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用<code>#</code>号表示标题，<code>#</code>号后加空格再加标题内容。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-section"># 一级标题</span><br><span class="hljs-section">## 二级标题</span><br><span class="hljs-section">### 三级标题</span><br><span class="hljs-section">#### 四级标题</span><br><span class="hljs-section">##### 五级标题</span><br><span class="hljs-section">###### 六级标题</span><br></code></pre></td></tr></table></figure><h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>段落之间使用空行分隔。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs md">第一段<br><br>第二段<br></code></pre></td></tr></table></figure><h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>使用<code>*</code>或<code>_</code>标记文本。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-emphasis">*斜体*</span><br><span class="hljs-emphasis">_斜体_</span><br><br><span class="hljs-strong">**粗体**</span><br><span class="hljs-strong">__粗体__</span><br></code></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用<code>-</code>、<code>+</code>或<code>*</code>标记每个列表项。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-bullet">-</span> 列表项1<br><span class="hljs-bullet">  -</span> 子列表项1<br><span class="hljs-bullet">  -</span> 子列表项2<br><span class="hljs-bullet">+</span> 列表项2<br><span class="hljs-bullet">*</span> 列表项3<br></code></pre></td></tr></table></figure><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用数字和<code>.</code>标记每个列表项。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-bullet">1.</span> 列表项1<br><span class="hljs-bullet">2.</span> 列表项2<br><span class="hljs-bullet">3.</span> 列表项3<br></code></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>引用段落前面使用<code>&gt;</code>号。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-quote">&gt; 这是引用的内容。</span><br></code></pre></td></tr></table></figure><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>使用一对三个反引号（&#96;&#96;&#96;）标记代码块。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs md"><br></code></pre></td></tr></table></figure><p>这是代码块</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul><li>行内式：使用<code>[链接文字](链接地址)</code>格式。</li><li>参考式：使用<code>[链接文字][链接标识符]</code>和<code>[链接标识符]: 链接地址</code>来表示链接。</li></ul><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs md">[<span class="hljs-string">百度</span>](<span class="hljs-link">https://www.baidu.com</span>)<br><br>[<span class="hljs-string">百度</span>][<span class="hljs-symbol">baidu</span>]<br>[<span class="hljs-symbol">baidu</span>]: <span class="hljs-link">https://www.baidu.com</span><br></code></pre></td></tr></table></figure><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul><li>行内式：使用<code>![alt文字](图片地址)</code>格式。</li><li>参考式：使用<code>![alt文字][图片标识符]</code>和<code>[图片标识符]: 图片地址</code>来表示图片。</li></ul><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs md">![<span class="hljs-string">picture</span>](<span class="hljs-link">https://example.com/picture.jpg</span>)<br><br>![<span class="hljs-string">picture</span>][<span class="hljs-symbol">pic</span>]<br>[<span class="hljs-symbol">pic</span>]: <span class="hljs-link">https://example.com/picture.jpg</span><br></code></pre></td></tr></table></figure><h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>使用<code>***</code>、<code>---</code>或<code>___</code>表示分割线。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-section"><span class="hljs-strong">***</span></span><br><span class="hljs-strong"><span class="hljs-section">---</span></span><br><span class="hljs-strong"><span class="hljs-section">__<span class="hljs-emphasis">_</span></span></span><br></code></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>使用<code>|</code>和<code>-</code>表示表格。</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs md">| 表头1 | 表头2 |<br>| ---- | ---- |<br>| 单元格1 | 单元格2 |<br>| 单元格3 | 单元格4 |<br></code></pre></td></tr></table></figure><pre><code class="hljs"></code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>干货</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>博客日志</title>
+    <link href="/2023/06/22/%E5%A4%A7%E5%AE%B6%E5%A5%BD%EF%BC%8C%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0Ink%20dyeing/"/>
+    <url>/2023/06/22/%E5%A4%A7%E5%AE%B6%E5%A5%BD%EF%BC%8C%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0Ink%20dyeing/</url>
+    
+    <content type="html"><![CDATA[<p>2023.6.22开始运营</p><p>2023.7关于页面出现问题，懒得修复</p><p>2023.8评论系统出现错误</p><p>2023.8图床出现错误</p><p>2023.9图床修复</p><p>2023.10.1修复评论系统</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>成长记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
