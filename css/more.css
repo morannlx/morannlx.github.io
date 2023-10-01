@@ -51,7 +51,8 @@ body {
 
 .banner {
     cursor: url(/images/Arrow.cur), auto;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0)
+    background: url(&quot;/images/none.jpg&quot;) center center / cover no-repeat; transform: translate3d(0px, 0px, 0px);
 }
 
 .scroll-down-bar {
