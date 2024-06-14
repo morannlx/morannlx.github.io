@@ -82,33 +82,6 @@
   
   
   <entry>
-    <title>git clone指定tag代码</title>
-    <link href="/2023/06/23/git%20clone%E6%8C%87%E5%AE%9Atag%E4%BB%A3%E7%A0%81/"/>
-    <url>/2023/06/23/git%20clone%E6%8C%87%E5%AE%9Atag%E4%BB%A3%E7%A0%81/</url>
-    
-    <content type="html"><![CDATA[<p>如果你想使用 Git 克隆仓库并且只想检出某个特定的标签，你可以在克隆命令后面加上一个 <code>--branch</code> 参数，并指定你想要检出的标签名称：</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">&lt;repository</span>&gt; --branch <span class="hljs-tag">&lt;tag_name&gt;</span><br></code></pre></td></tr></table></figure><p>例如，如果你想克隆仓库 [<a href="https://github.com/4accccc/vivo-Magisk-Delta-suu.git]">https://github.com/4accccc/vivo-Magisk-Delta-suu.git]</a> 并且检出标签名为 v1.0.0 的代码，你可以使用以下命令：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/user/</span>repo.git --branch v1.<span class="hljs-number">0.0</span><br></code></pre></td></tr></table></figure><p>这样 Git 会克隆仓库并且直接检出 v1.0.0 标签对应的代码。</p><p>注意：如果你在克隆仓库时指定了一个不存在的标签名，Git 会报错，并且不会克隆仓库。</p><iframe src="//http://192.168.1.114:8080/#explorer&pathFile=%7Bsource:21%7D/>]]></content>
-    
-    
-    <categories>
-      
-      <category>成长记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>干货</tag>
-      
-      <tag>博客</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Markdown---简单易用的标记语言</title>
     <link href="/2023/06/22/Markdown--%E7%AE%80%E5%8D%95%E6%98%93%E7%94%A8%E7%9A%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
     <url>/2023/06/22/Markdown--%E7%AE%80%E5%8D%95%E6%98%93%E7%94%A8%E7%9A%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/</url>
@@ -120,31 +93,6 @@
     <tags>
       
       <tag>干货</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>博客日志</title>
-    <link href="/2023/06/22/%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/"/>
-    <url>/2023/06/22/%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/</url>
-    
-    <content type="html"><![CDATA[<h1 id="2023-6"><a href="#2023-6" class="headerlink" title="2023.6"></a>2023.6</h1><p>2023.6.22开始运营</p><h1 id="2023-7"><a href="#2023-7" class="headerlink" title="2023.7"></a>2023.7</h1><p>2023.7关于页面出现问题，懒得修复</p><h1 id="2023-8"><a href="#2023-8" class="headerlink" title="2023.8"></a>2023.8</h1><p>2023.8评论系统出现错误</p><p>2023.8图床出现错误</p><h1 id="2023-9"><a href="#2023-9" class="headerlink" title="2023.9"></a>2023.9</h1><p>2023.9图床修复</p><h1 id="2023-10"><a href="#2023-10" class="headerlink" title="2023.10"></a>2023.10</h1><p>2023.10.1修复评论系统</p><p>2023.10.2<br>重构整个博客的结构<br>网盘（图床）优化访问速度<br>4:03 为博客评论系统添加邮箱通知，收工睡觉</p><h1 id="2023-11"><a href="#2023-11" class="headerlink" title="2023.11"></a>2023.11</h1><p>11.05<br>cdn更换为gcore，国内访问速度得到大幅度提升</p><p>11.19<br>增加了小游戏合集，<br>添加游戏有2048，猫里奥，坤坤小游戏</p><p>增加留言板</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>成长记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>博客</tag>
       
     </tags>
     
