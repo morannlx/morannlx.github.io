@@ -12,13 +12,12 @@
        url('../fonts/noto-serif-sc-v22-chinese-simplified-regular.svg#NotoSerifSC') format('svg'); /* Legacy iOS */
 }
 
-/* 设置背景图片 */
+/* 设置背景图片*/
 body {
-  background: url(https://ooo.0x0.ooo/2023/10/02/OnIFSx.jpg);
+  background: url(https://ooo.0x0.ooo/2025/02/28/OQyMGX.jpg);
   background-attachment: fixed;
   background-size: cover;  
 }
-
 
 //代码框透明度
 [data-user-color-scheme=dark] {
