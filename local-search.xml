@@ -29,6 +29,25 @@
   
   
   <entry>
+    <title>博客日志</title>
+    <link href="/2025/02/17/blog-note/"/>
+    <url>/2025/02/17/blog-note/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2023-6"><a href="#2023-6" class="headerlink" title="2023.6"></a>2023.6</h1><p>2023.6.22开始运营</p><h1 id="2023-7"><a href="#2023-7" class="headerlink" title="2023.7"></a>2023.7</h1><p>2023.7关于页面出现问题，懒得修复</p><h1 id="2023-8"><a href="#2023-8" class="headerlink" title="2023.8"></a>2023.8</h1><p>2023.8评论系统出现错误</p><p>2023.8图床出现错误</p><h1 id="2023-9"><a href="#2023-9" class="headerlink" title="2023.9"></a>2023.9</h1><p>2023.9图床修复</p><h1 id="2023-10"><a href="#2023-10" class="headerlink" title="2023.10"></a>2023.10</h1><p>2023.10.1修复评论系统</p><p>2023.10.2<br>重构整个博客的结构<br>网盘（图床）优化访问速度<br>4:03 为博客评论系统添加邮箱通知，收工睡觉</p><h1 id="2023-11"><a href="#2023-11" class="headerlink" title="2023.11"></a>2023.11</h1><p>11.05<br>cdn更换为gcore，国内访问速度得到大幅度提升</p><p>11.19<br>增加了小游戏合集，<br>添加游戏有2048，猫里奥，坤坤小游戏</p><p>增加留言板</p><h1 id="2024-03"><a href="#2024-03" class="headerlink" title="2024.03"></a>2024.03</h1><p>3.02<br>域名过期，换回cloudflare<br>删除小游戏面板<br>重新魔改主题</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>[object Object]</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>配置waline的评论邮件提醒</title>
     <link href="/2023/10/02/build-waline/"/>
     <url>/2023/10/02/build-waline/</url>
@@ -70,9 +89,9 @@
     
     <tags>
       
-      <tag>干货</tag>
-      
       <tag>博客</tag>
+      
+      <tag>干货</tag>
       
     </tags>
     
