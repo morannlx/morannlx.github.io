@@ -1,13 +1,13 @@
 User-agent: *
-Allow: /
+Allow: /about/
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
+Allow: /_posts/
 
 Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
-Disallow: /_posts/
 Disallow: /remark/
 
 Sitemap: https://moranwp.eu.org/sitemap.xml
