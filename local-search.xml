@@ -8,7 +8,7 @@
     <link href="/TB375FCTOOL.html"/>
     <url>/TB375FCTOOL.html</url>
     
-    <content type="html"><![CDATA[<p>偶然发现这个平板在锁定bootloader的情况下仍然可以刷写分区（离谱到家），所以花了点时间，来写了一个解锁加root的工具箱<br>结构如图<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100452270.png"></p><p>工具箱主界面<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100542271.png"><br>根据工具箱提示操作就可以了<br><strong>使用前需注意：任何功能在使用前需在开机的情况下保证adb连接，特别是root功能，否则不能正确安装apk以及重启至fastboot刷写init_boot</strong></p><p>本工具箱的优点为<br><strong>零变砖，风险低</strong><br><strong>工具箱完全依赖adb，无需进行额外操作</strong></p><h2 id="下载链接：点我下载"><a href="#下载链接：点我下载" class="headerlink" title="下载链接：点我下载"></a>下载链接：<a href="https://dashen666666.lanzn.com/iwDLN2ryj29e">点我下载</a></h2><p><strong>目前仅适配091，041版本，其它版本也可使用但无法还原lk以及使用获取root功能</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>偶然发现这个平板在锁定bootloader的情况下仍然可以刷写分区（离谱到家），所以花了点时间，来写了一个解锁加root的工具箱<br>结构如图<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100452270.png"></p><p>工具箱主界面<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100542271.png"><br>根据工具箱提示操作就可以了<br><strong>使用前需注意：任何功能在使用前需在开机的情况下保证adb连接，特别是root功能，否则不能正确安装apk以及重启至fastboot刷写init_boot</strong></p><p>本工具箱的优点为<br><strong>零变砖，风险低</strong><br><strong>工具箱完全依赖adb，无需进行额外操作</strong></p><h2 id="下载链接：点我下载"><a href="#下载链接：点我下载" class="headerlink" title="下载链接：点我下载"></a>下载链接：<a href="https://dashen666666.lanzn.com/inSvq2ryk7kb">点我下载</a></h2><p><strong>目前仅适配091，041版本，其它版本也可使用但无法还原lk以及使用获取root功能</strong></p>]]></content>
     
     
     <categories>
