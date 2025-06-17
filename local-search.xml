@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>记录一下怎么修改”timesu”面具（suu同理）</title>
+    <link href="/build-magisk-suu.html"/>
+    <url>/build-magisk-suu.html</url>
+    
+    <content type="html"><![CDATA[<p>总共修改几处</p><h2 id="1-修改applets"><a href="#1-修改applets" class="headerlink" title="1.修改applets"></a>1.修改applets</h2><p>路径：D:\MAGISK\Magisk\native\src\core\applets.cpp</p><p>位置：16~19行</p><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs prolog">onstexpr <span class="hljs-symbol">Applet</span> applets[] = &#123;<br>    &#123; <span class="hljs-string">&quot;su&quot;</span>, su_client_main &#125;,<br>    &#123; <span class="hljs-string">&quot;resetprop&quot;</span>, resetprop_main &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure><p>改成</p><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs prolog">onstexpr <span class="hljs-symbol">Applet</span> applets[] = &#123;<br>    &#123; <span class="hljs-string">&quot;timesu&quot;</span>, su_client_main &#125;,<br>    &#123; <span class="hljs-string">&quot;resetprop&quot;</span>, resetprop_main &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure><h2 id="2-修改consts-hpp"><a href="#2-修改consts-hpp" class="headerlink" title="2.修改consts.hpp"></a>2.修改consts.hpp</h2><p>路径：D:\MAGISK\Magisk\native\src\include\consts.hpp</p><p>位置：29行</p><p>改成</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">constexpr</span> <span class="hljs-type">const</span> <span class="hljs-type">char</span> *applet_names[] = &#123; <span class="hljs-string">&quot;timesu&quot;</span>, <span class="hljs-string">&quot;resetprop&quot;</span>, <span class="hljs-literal">nullptr</span> &#125;;<br></code></pre></td></tr></table></figure><h2 id="3-修改libsu库"><a href="#3-修改libsu库" class="headerlink" title="3.修改libsu库"></a>3.修改libsu库</h2><p>在magisk23.0版本后，不再采用本地libsu库，采用线上libsu库，需要自建libsu库才能让改好的magisk管理器识别到timesu，作者在此已建好，直接用即可</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs agsl">val vLibsu = &quot;6.0-timesu&quot;<br>   api(&quot;com.github.morannlx.libhza:core:$&#123;vLibsu&#125;&quot;)<br>   api(&quot;com.github.morannlx.libhza:service:$&#123;vLibsu&#125;&quot;)<br>   api(&quot;com.github.morannlx.libhza:nio:$&#123;vLibsu&#125;&quot;)<br></code></pre></td></tr></table></figure><p>用法：D:\MAGISK\Magisk\app\core\build.gradle.kts<br>自行对比修改成如图<br><img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk1.png"></p><p>改成suu的话，直接用4acccc的libsuu就行了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs agsl">val vLibsu = &quot;6.0.0&quot;<br>   implementation(&quot;com.github.4accccc.libsu:core:$&#123;vLibsu&#125;&quot;)<br>   implementation(&quot;com.github.4accccc.libsu:service:$&#123;vLibsu&#125;&quot;)<br>   implementation(&quot;com.github.4accccc.libsu:nio:$&#123;vLibsu&#125;&quot;)<br></code></pre></td></tr></table></figure><p>4.修改patch补丁(vivo修补必加)<br>路径：D:\MAGISK\Magisk\scripts\boot_patch.sh</p><p>添加如下代码</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs clean"># patch vivo do_mount_check<br>    # /<span class="hljs-keyword">system</span> -&gt; /syswxl<br>    # python3 -c <span class="hljs-string">&quot;print(hex(int.from_bytes(b&#x27;/system&#x27;, &#x27;big&#x27;)^int(&#x27;bdbcbbbab9b8b7&#x27;, 16)))&quot;</span><br>    ./magiskboot hexpatch kernel <span class="hljs-number">0092</span>CFC2C9CDDDDA00 <span class="hljs-number">0092</span>CFC2C9CEC0DB00 &amp;&amp; PATCHEDKERNEL=true<br></code></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk2.png"></p><p>修改完成后，直接编译即可，编译命令（windows）：<code>python build.py -r all</code></p><p>本文参考自：!(wuxianlin&#x2F;build_magisk_vivo)[<a href="https://github.com/wuxianlin/build_magisk_vivo]">https://github.com/wuxianlin/build_magisk_vivo]</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>刷机日常</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>刷机</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>联想小新padpro12.7二代解锁工具箱</title>
     <link href="/TB375FCTOOL.html"/>
     <url>/TB375FCTOOL.html</url>

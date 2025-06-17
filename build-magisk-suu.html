@@ -16,26 +16,27 @@
   <meta name="author" content="墨染_nlx">
   <meta name="keywords" content="InkDyeing,刷机,玩机">
   
-    <meta name="description" content="偶然发现这个平板在锁定bootloader的情况下仍然可以刷写分区（离谱到家），所以花了点时间，来写了一个解锁加root的工具箱结构如图 工具箱主界面根据工具箱提示操作就可以了使用前需注意：任何功能在使用前需在开机的情况下保证adb连接，特别是root功能，否则不能正确安装apk以及重启至fastboot刷写init_boot 本工具箱的优点为零变砖，风险低工具箱完全依赖adb，无需进行额外操作">
+    <meta name="description" content="总共修改几处 1.修改applets路径：D:\MAGISK\Magisk\native\src\core\applets.cpp 位置：16~19行 1234onstexpr Applet applets[] &#x3D; &amp;#123;    &amp;#123; &quot;su&quot;, su_client_main &amp;#125;,    &amp;#123; &quot;resetprop&quot;, res">
 <meta property="og:type" content="article">
-<meta property="og:title" content="联想小新padpro12.7二代解锁工具箱">
-<meta property="og:url" content="https://moranwp.eu.org/TB375FCTOOL.html">
+<meta property="og:title" content="记录一下怎么修改”timesu”面具（suu同理）">
+<meta property="og:url" content="https://moranwp.eu.org/build-magisk-suu.html">
 <meta property="og:site_name" content="InkDyeing">
-<meta property="og:description" content="偶然发现这个平板在锁定bootloader的情况下仍然可以刷写分区（离谱到家），所以花了点时间，来写了一个解锁加root的工具箱结构如图 工具箱主界面根据工具箱提示操作就可以了使用前需注意：任何功能在使用前需在开机的情况下保证adb连接，特别是root功能，否则不能正确安装apk以及重启至fastboot刷写init_boot 本工具箱的优点为零变砖，风险低工具箱完全依赖adb，无需进行额外操作">
+<meta property="og:description" content="总共修改几处 1.修改applets路径：D:\MAGISK\Magisk\native\src\core\applets.cpp 位置：16~19行 1234onstexpr Applet applets[] &#x3D; &amp;#123;    &amp;#123; &quot;su&quot;, su_client_main &amp;#125;,    &amp;#123; &quot;resetprop&quot;, res">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100542271.png">
-<meta property="article:published_time" content="2025-03-27T02:00:46.693Z">
-<meta property="article:modified_time" content="2025-03-28T15:10:05.912Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk2.png">
+<meta property="article:published_time" content="2025-06-17T15:04:29.024Z">
+<meta property="article:modified_time" content="2025-06-17T15:13:44.650Z">
 <meta property="article:author" content="墨染_nlx">
 <meta property="article:tag" content="刷机">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100542271.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>联想小新padpro12.7二代解锁工具箱 - InkDyeing</title>
+  <title>记录一下怎么修改”timesu”面具（suu同理） - InkDyeing</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -253,7 +254,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="联想小新padpro12.7二代解锁工具箱"></span>
+            <span id="subtitle" data-typed-text="记录一下怎么修改”timesu”面具（suu同理）"></span>
           
         </div>
 
@@ -264,8 +265,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-27 10:00" pubdate>
-          2025年3月27日 上午
+        <time datetime="2025-06-17 23:04" pubdate>
+          2025年6月17日 晚上
         </time>
       </span>
     
@@ -276,7 +277,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          248 字
+          1.7k 字
         
       </span>
     
@@ -323,12 +324,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">联想小新padpro12.7二代解锁工具箱</h1>
+            <h1 id="seo-header">记录一下怎么修改”timesu”面具（suu同理）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：3 个月前
+                    本文最后更新于：1 分钟前
                   
                 
               </p>
@@ -336,10 +337,31 @@
             
               <div class="markdown-body">
                 
-                <p>偶然发现这个平板在锁定bootloader的情况下仍然可以刷写分区（离谱到家），所以花了点时间，来写了一个解锁加root的工具箱<br>结构如图<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100452270.png" srcset="/img/loading.gif" lazyload></p>
-<p>工具箱主界面<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/20250327100542271.png" srcset="/img/loading.gif" lazyload><br>根据工具箱提示操作就可以了<br><strong>使用前需注意：任何功能在使用前需在开机的情况下保证adb连接，特别是root功能，否则不能正确安装apk以及重启至fastboot刷写init_boot</strong></p>
-<p>本工具箱的优点为<br><strong>零变砖，风险低</strong><br><strong>工具箱完全依赖adb，无需进行额外操作</strong></p>
-<h2 id="下载链接：点我下载"><a href="#下载链接：点我下载" class="headerlink" title="下载链接：点我下载"></a>下载链接：<a target="_blank" rel="noopener" href="https://dashen666666.lanzn.com/inSvq2ryk7kb">点我下载</a></h2><p><strong>目前仅适配091，041版本，其它版本也可使用但无法还原lk以及使用获取root功能</strong></p>
+                <p>总共修改几处</p>
+<h2 id="1-修改applets"><a href="#1-修改applets" class="headerlink" title="1.修改applets"></a>1.修改applets</h2><p>路径：D:\MAGISK\Magisk\native\src\core\applets.cpp</p>
+<p>位置：16~19行</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs prolog">onstexpr <span class="hljs-symbol">Applet</span> applets[] = &#123;<br>    &#123; <span class="hljs-string">&quot;su&quot;</span>, su_client_main &#125;,<br>    &#123; <span class="hljs-string">&quot;resetprop&quot;</span>, resetprop_main &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs prolog">onstexpr <span class="hljs-symbol">Applet</span> applets[] = &#123;<br>    &#123; <span class="hljs-string">&quot;timesu&quot;</span>, su_client_main &#125;,<br>    &#123; <span class="hljs-string">&quot;resetprop&quot;</span>, resetprop_main &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-修改consts-hpp"><a href="#2-修改consts-hpp" class="headerlink" title="2.修改consts.hpp"></a>2.修改consts.hpp</h2><p>路径：D:\MAGISK\Magisk\native\src\include\consts.hpp</p>
+<p>位置：29行</p>
+<p>改成</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">constexpr</span> <span class="hljs-type">const</span> <span class="hljs-type">char</span> *applet_names[] = &#123; <span class="hljs-string">&quot;timesu&quot;</span>, <span class="hljs-string">&quot;resetprop&quot;</span>, <span class="hljs-literal">nullptr</span> &#125;;<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-修改libsu库"><a href="#3-修改libsu库" class="headerlink" title="3.修改libsu库"></a>3.修改libsu库</h2><p>在magisk23.0版本后，不再采用本地libsu库，采用线上libsu库，需要自建libsu库才能让改好的magisk管理器识别到timesu，作者在此已建好，直接用即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs agsl">val vLibsu = &quot;6.0-timesu&quot;<br>   api(&quot;com.github.morannlx.libhza:core:$&#123;vLibsu&#125;&quot;)<br>   api(&quot;com.github.morannlx.libhza:service:$&#123;vLibsu&#125;&quot;)<br>   api(&quot;com.github.morannlx.libhza:nio:$&#123;vLibsu&#125;&quot;)<br></code></pre></td></tr></table></figure>
+<p>用法：D:\MAGISK\Magisk\app\core\build.gradle.kts<br>自行对比修改成如图<br><img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk1.png" srcset="/img/loading.gif" lazyload></p>
+<p>改成suu的话，直接用4acccc的libsuu就行了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs agsl">val vLibsu = &quot;6.0.0&quot;<br>   implementation(&quot;com.github.4accccc.libsu:core:$&#123;vLibsu&#125;&quot;)<br>   implementation(&quot;com.github.4accccc.libsu:service:$&#123;vLibsu&#125;&quot;)<br>   implementation(&quot;com.github.4accccc.libsu:nio:$&#123;vLibsu&#125;&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>4.修改patch补丁(vivo修补必加)<br>路径：D:\MAGISK\Magisk\scripts\boot_patch.sh</p>
+<p>添加如下代码</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs clean"># patch vivo do_mount_check<br>    # /<span class="hljs-keyword">system</span> -&gt; /syswxl<br>    # python3 -c <span class="hljs-string">&quot;print(hex(int.from_bytes(b&#x27;/system&#x27;, &#x27;big&#x27;)^int(&#x27;bdbcbbbab9b8b7&#x27;, 16)))&quot;</span><br>    ./magiskboot hexpatch kernel <span class="hljs-number">0092</span>CFC2C9CDDDDA00 <span class="hljs-number">0092</span>CFC2C9CEC0DB00 &amp;&amp; PATCHEDKERNEL=true<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/magisk2.png" srcset="/img/loading.gif" lazyload></p>
+<p>修改完成后，直接编译即可，编译命令（windows）：<code>python build.py -r all</code></p>
+<p>本文参考自：!(wuxianlin&#x2F;build_magisk_vivo)[<a target="_blank" rel="noopener" href="https://github.com/wuxianlin/build_magisk_vivo]">https://github.com/wuxianlin/build_magisk_vivo]</a></p>
 
                 
               </div>
@@ -385,8 +407,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>联想小新padpro12.7二代解锁工具箱</div>
-      <div>https://moranwp.eu.org/TB375FCTOOL.html</div>
+      <div>记录一下怎么修改”timesu”面具（suu同理）</div>
+      <div>https://moranwp.eu.org/build-magisk-suu.html</div>
     </div>
     <div class="license-meta">
       
@@ -398,7 +420,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月27日</div>
+          <div>2025年6月17日</div>
         </div>
       
       
@@ -430,18 +452,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/build-magisk-suu.html" title="记录一下怎么修改”timesu”面具（suu同理）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">记录一下怎么修改”timesu”面具（suu同理）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/TB375FC.html" title="联想小新padpro12.7二代解锁bl教程">
-                        <span class="hidden-mobile">联想小新padpro12.7二代解锁bl教程</span>
+                      <a href="/TB375FCTOOL.html" title="联想小新padpro12.7二代解锁工具箱">
+                        <span class="hidden-mobile">联想小新padpro12.7二代解锁工具箱</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
