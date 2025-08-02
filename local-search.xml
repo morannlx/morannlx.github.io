@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程</title>
+    <link href="/save-brick.html"/>
+    <url>/save-brick.html</url>
+    
+    <content type="html"><![CDATA[<p>如题所示，因为太闲，就想着提取iqooz10 turbo+的系统软件安装到我的iqooz9turbo+上，结果重启后系统界面直接黑屏没办法正常使用，就有了这次的救砖记录</p><p>因为是安装到data&#x2F;app目录上，故删除掉安装的systemui即可恢复正常</p><p>理论存在，实践开始</p><p>因为没办法正常操作手机，只能用adb来进行操作</p><p>首先上来就遇到了难题：之前没有给shell root权限，导致没办法正常进行操作<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz1.png"><br>怎么办？问题不大！拉magisk源码编译一个救砖版就好啦，这里已经有大佬编译过了，这是下载链接：<a href="https://dashen666666.lanzouu.com/iTZVk32gli3e">点我下载</a><br>修改部分：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 禁用magisk管理器签名校验">放行所有root请求，不再监控root授权<br>停用所有magisk模块，强制启动到magisk安全模式<br>禁用post-fs-data.d、service.d脚本开机执行<br>强制开启usb调试，允许任意电脑连接调试<br>此版本magisk仅用作救砖用途，救砖完成后请切换回官方magisk<br></code></pre></td></tr></table></figure><p>安装此版本magisk后就可以获取root权限了<br><img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz.png"></p><p>接下来就是寻找systemui的安装路径</p><p>首先，系统界面的包名是<em><strong>com.android.systemui</strong></em><br>随后在命令行输入：<code>pm path com.android.systemui</code> <img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz2.png"><br>可以看到路径是：<code>/data/app/~~LXEkiAGX0pYanSo_XmZVTQ==/com.android.systemui-5JqV3um7bHzNveUxPQ_yWQ==/base.apk</code><br>接下来把它删除掉，输入：<code>rm /data/app/~~LXEkiAGX0pYanSo_XmZVTQ==/com.android.systemui-5JqV3um7bHzNveUxPQ_yWQ==/base.apk</code> <img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz3.png"><br>最后使用reboot重启手机即可恢复正常</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>刷机日常</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>刷机</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>记录一下怎么修改”timesu”面具（suu同理）</title>
     <link href="/build-magisk-suu.html"/>
     <url>/build-magisk-suu.html</url>
