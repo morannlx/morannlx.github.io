@@ -16,26 +16,24 @@
   <meta name="author" content="墨染_nlx">
   <meta name="keywords" content="InkDyeing,刷机,玩机">
   
-    <meta name="description" content="如题所示，因为太闲，就想着提取iqooz10 turbo+的系统软件安装到我的iqooz9turbo+上，结果重启后系统界面直接黑屏没办法正常使用，就有了这次的救砖记录 因为是安装到data&#x2F;app目录上，故删除掉安装的systemui即可恢复正常 理论存在，实践开始 因为没办法正常操作手机，只能用adb来进行操作 首先上来就遇到了难题：之前没有给shell root权限，导致没办法正常">
+    <meta name="description" content="使用avbtool 为Android 镜像签名以启动主线Linux本文使用了AI进行润色，因为这篇文章前后打磨花费了超出预期的时间，所以格式上将不再进行调整。请自行使用 Markdown 渲染器查看。 本文记录了我使用 avbtool 为 Android 镜像签名、从而在设备上启动主线 Linux 的过程。本人对 AVB 和 Android 了解有限，计算机相关知识大多自学而来，本文仅供参考，可能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程">
-<meta property="og:url" content="https://moranwp.eu.org/save-brick.html">
+<meta property="og:title" content="使用avbtool 为Android 镜像签名以启动主线Linux">
+<meta property="og:url" content="https://moranwp.eu.org/avbtool.html">
 <meta property="og:site_name" content="InkDyeing">
-<meta property="og:description" content="如题所示，因为太闲，就想着提取iqooz10 turbo+的系统软件安装到我的iqooz9turbo+上，结果重启后系统界面直接黑屏没办法正常使用，就有了这次的救砖记录 因为是安装到data&#x2F;app目录上，故删除掉安装的systemui即可恢复正常 理论存在，实践开始 因为没办法正常操作手机，只能用adb来进行操作 首先上来就遇到了难题：之前没有给shell root权限，导致没办法正常">
+<meta property="og:description" content="使用avbtool 为Android 镜像签名以启动主线Linux本文使用了AI进行润色，因为这篇文章前后打磨花费了超出预期的时间，所以格式上将不再进行调整。请自行使用 Markdown 渲染器查看。 本文记录了我使用 avbtool 为 Android 镜像签名、从而在设备上启动主线 Linux 的过程。本人对 AVB 和 Android 了解有限，计算机相关知识大多自学而来，本文仅供参考，可能">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz.png">
-<meta property="article:published_time" content="2025-08-02T14:07:36.557Z">
-<meta property="article:modified_time" content="2025-08-02T14:39:59.474Z">
+<meta property="article:published_time" content="2025-09-21T09:26:27.183Z">
+<meta property="article:modified_time" content="2025-09-21T09:51:09.974Z">
 <meta property="article:author" content="墨染_nlx">
 <meta property="article:tag" content="刷机">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程 - InkDyeing</title>
+  <title>使用avbtool 为Android 镜像签名以启动主线Linux - InkDyeing</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -253,7 +251,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程"></span>
+            <span id="subtitle" data-typed-text="使用avbtool 为Android 镜像签名以启动主线Linux"></span>
           
         </div>
 
@@ -264,8 +262,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-02 22:07" pubdate>
-          2025年8月2日 晚上
+        <time datetime="2025-09-21 17:26" pubdate>
+          2025年9月21日 下午
         </time>
       </span>
     
@@ -276,7 +274,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          729 字
+          2.4k 字
         
       </span>
     
@@ -323,12 +321,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程</h1>
+            <h1 id="seo-header">使用avbtool 为Android 镜像签名以启动主线Linux</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2 个月前
+                    本文最后更新于：1 分钟前
                   
                 
               </p>
@@ -336,17 +334,69 @@
             
               <div class="markdown-body">
                 
-                <p>如题所示，因为太闲，就想着提取iqooz10 turbo+的系统软件安装到我的iqooz9turbo+上，结果重启后系统界面直接黑屏没办法正常使用，就有了这次的救砖记录</p>
-<p>因为是安装到data&#x2F;app目录上，故删除掉安装的systemui即可恢复正常</p>
-<p>理论存在，实践开始</p>
-<p>因为没办法正常操作手机，只能用adb来进行操作</p>
-<p>首先上来就遇到了难题：之前没有给shell root权限，导致没办法正常进行操作<img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz1.png" srcset="/img/loading.gif" lazyload><br>怎么办？问题不大！拉magisk源码编译一个救砖版就好啦，这里已经有大佬编译过了，这是下载链接：<a target="_blank" rel="noopener" href="https://dashen666666.lanzouu.com/iTZVk32gli3e">点我下载</a><br>修改部分：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 禁用magisk管理器签名校验">放行所有root请求，不再监控root授权<br>停用所有magisk模块，强制启动到magisk安全模式<br>禁用post-fs-data.d、service.d脚本开机执行<br>强制开启usb调试，允许任意电脑连接调试<br>此版本magisk仅用作救砖用途，救砖完成后请切换回官方magisk<br></code></pre></td></tr></table></figure>
+                <h1 id="使用avbtool-为Android-镜像签名以启动主线Linux"><a href="#使用avbtool-为Android-镜像签名以启动主线Linux" class="headerlink" title="使用avbtool 为Android 镜像签名以启动主线Linux"></a>使用avbtool 为Android 镜像签名以启动主线Linux</h1><p>本文使用了AI进行润色，因为这篇文章前后打磨花费了超出预期的时间，所以格式上将不再进行调整。请自行使用 Markdown 渲染器查看。</p>
+<p>本文记录了我使用 avbtool 为 Android 镜像签名、从而在设备上启动主线 Linux 的过程。<br>本人对 AVB 和 Android 了解有限，计算机相关知识大多自学而来，<strong>本文仅供参考，可能存在错误或不严谨之处，请勿较真</strong>。<br>文中所有命令仅在 Linux 环境下测试，其他平台不保证适用。</p>
+<hr>
+<h2 id="AVB-简介"><a href="#AVB-简介" class="headerlink" title="AVB 简介"></a>AVB 简介</h2><p>AVB（Android Verified Boot） 是 Android 用于验证启动分区合法性的一套标准，用来建立从 bootloader 到系统镜像的<strong>信任链</strong>，并提供<strong>回滚保护</strong>等安全功能。</p>
+<p>启用 AVB 需要一对密钥：</p>
+<ul>
+<li>公钥（信任根） 的哈希值由厂商烧录到 SoC；</li>
+<li>私钥 用于对系统镜像签名。</li>
+</ul>
+<p>在启动过程中，<strong>ABL（Android Bootloader）</strong> 会验证签名与哈希值。<br>系统中还存在一个关键分区——<code>vbmeta</code>，其中记录了多个分区的签名及哈希信息。<code>vbmeta</code> 还可以指向若干“链式验证分区”，其结构与 vbmeta 相似，只是不会再嵌套指向其他分区。主要字段包括：</p>
+<ul>
+<li>公钥（哈希值）</li>
+<li>回滚指数</li>
+<li>分区名及对应哈希算法</li>
+<li>数据摘要（固定长度哈希字符串）等。</li>
+</ul>
+<hr>
+<h2 id="查看-vbmeta-信息"><a href="#查看-vbmeta-信息" class="headerlink" title="查看 vbmeta 信息"></a>查看 vbmeta 信息</h2><p>使用以下命令可查看 vbmeta 中的相关信息：</p>
+<p>avbtool info_image –image vbmeta.img</p>
+<blockquote>
+<p>注**：<code>avbtool</code> 是一个 Python 脚本，可直接从网络获取。<br>Windows 环境下可能需要改为 <code>python avbtool</code> 并确保依赖模块已安装。</p>
+</blockquote>
+<hr>
+<h2 id="为分区添加-Hash-Footer"><a href="#为分区添加-Hash-Footer" class="headerlink" title="为分区添加 Hash Footer"></a>为分区添加 Hash Footer</h2><p>对 <strong>非链式验证分区</strong>，可使用如下命令添加 Hash Footer（但不是必需的，因为 ABL 只会核对这些分区对应在 vbmeta 中的信息）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">avbtool add_hash_footer \<br>--image &lt;path_to_image&gt; \<br>--partition_size &lt;partition_size&gt; \<br>--partition_name &lt;partition_name&gt; \<br>--algorithm &lt;algorithm&gt; \<br>--salt &lt;salt_string&gt; \<br>--key &lt;path_to_private_key&gt;<br></code></pre></td></tr></table></figure>
 
+<p>在学习和使用上述命令时, 为了避免对 openssl 命令的介绍,<br>示例中私钥直接用 AOSP 提供的 <strong>测试密钥</strong>（RSA4096），对应算法为 <code>SHA256_RSA4096</code>。<br>这是公开的测试私钥，仅供学习，请<strong>绝不能用于生产环境</strong>。</p>
+<blockquote>
+<p>⚠️ <strong>警告</strong>：即便如此，仍有厂商在零售设备中使用了测试或公开密钥。(如某个电视大厂和通信大厂，这里就不点名了)</p>
+</blockquote>
+<p>常见公开测试密钥汇总可参考：<br><a target="_blank" rel="noopener" href="https://github.com/nccgroup/test_avb_key">test_avb_key</a> </p>
+<p>提取公钥并查看其哈希：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> pem <span class="hljs-keyword">in</span> *.pem; <span class="hljs-keyword">do</span><br>avbtool extract_public_key --key <span class="hljs-string">&quot;<span class="hljs-variable">$pem</span>&quot;</span> --output <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;pem%.*&#125;</span>.bin&quot;</span><br><span class="hljs-built_in">sha1sum</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;pem%.*&#125;</span>.bin&quot;</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
 
-<p>安装此版本magisk后就可以获取root权限了<br><img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz.png" srcset="/img/loading.gif" lazyload></p>
-<p>接下来就是寻找systemui的安装路径</p>
-<p>首先，系统界面的包名是<em><strong>com.android.systemui</strong></em><br>随后在命令行输入：<code>pm path com.android.systemui</code> <img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz2.png" srcset="/img/loading.gif" lazyload><br>可以看到路径是：<code>/data/app/~~LXEkiAGX0pYanSo_XmZVTQ==/com.android.systemui-5JqV3um7bHzNveUxPQ_yWQ==/base.apk</code><br>接下来把它删除掉，输入：<code>rm /data/app/~~LXEkiAGX0pYanSo_XmZVTQ==/com.android.systemui-5JqV3um7bHzNveUxPQ_yWQ==/base.apk</code> <img src="https://cdn.jsdelivr.net/gh/morannlx/Picturebed/jz3.png" srcset="/img/loading.gif" lazyload><br>最后使用reboot重启手机即可恢复正常</p>
+<p>其中包含</p>
+<p>60daed9eaef7456fd487433866a56d597f25b326 testkey_rsa4096_oneplus.bin</p>
+<p>不幸的是我们可以在新的一加设备上发现, 对应的公钥哈希是</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">avbtool info_image --image vbmeta.img | grep <span class="hljs-string">&#x27;Public key&#x27;</span><br><br>Public key (sha1): 521801a1ce15f70ee1cb3c1cbf2102da46fe5d5a<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="链式验证分区（以-boot-为例）"><a href="#链式验证分区（以-boot-为例）" class="headerlink" title="链式验证分区（以 boot 为例）"></a>链式验证分区（以 boot 为例）</h2><p>链式验证分区（如 <code>boot</code>）<strong>必须</strong>包含 Hash Footer，因为 <code>vbmeta</code> 中只记录其公钥信息，不保存具体哈希。<br>若缺失，将触发 <code>avb_slot_verify.c</code> 中的错误(load_and_verify_vbmeta())：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">ERROR: </span>boot_a: Error verifying vbmeta image: invalid vbmeta header<br></code></pre></td></tr></table></figure>
+
+<p>此外，还可能遇到：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">Footer osP_version prop <span class="hljs-keyword">not</span> <span class="hljs-built_in">found</span><br>Boot image <span class="hljs-keyword">header</span> OS version == <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<p>原因是 <code>VerifiedBoot.c</code> 中的 <code>GetOsVerAndSecPactchLevel()</code> 未能找到 Android 版本信息。<br>解决方案：在 <code>avbtool</code> 命令中加入以下属性：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">--prop com.android.build.boot.os_version:<span class="hljs-string">&#x27;15&#x27;</span><br>--prop com.android.build.boot.security_patch:<span class="hljs-string">&#x27;2025-02-05&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>或在构建 boot 镜像时直接设置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">mkbootimg \<br>--kernel vmlinuz \<br>--ramdisk initramfs \<br>...<br>--os_version 15 \<br>--os_patch_level 2025-02-05 \<br>-o mainline-boot.img<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="回滚保护"><a href="#回滚保护" class="headerlink" title="回滚保护"></a>回滚保护</h2><p>若添加 Hash Footer 时未指定回滚指数，默认值为 0。<br>若该值小于 **RPMB 中的已存回滚指数，启动时将报错：</p>
+<p>ERROR: boot_a: Image rollback index is less than the stored rollback index.</p>
+<p>解决方法：在签名时指定一个不小于原厂系统值的回滚指数，例如：</p>
+<p>–rollback_index <rollback_index_value></p>
+<hr>
+<h2 id="启动主线-Linux"><a href="#启动主线-Linux" class="headerlink" title="启动主线 Linux"></a>启动主线 Linux</h2><p>至此，boot 分区已正确签名，可以在解锁状态下顺利启动主线 Linux。<br>特别是厂商定制的 ABL 禁止关闭 AVB(但允许部分分区 Hash Mismatch)，这种方式尤其必要。</p>
+<hr>
+<p>写到这里，本文已经远超原计划的篇幅。剩余细节留待读者自行探索。</p>
+<p>参考文献：<a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/67340605?s=NjAwMDE2Y2UzNTAxNjZnNjhjZmNhM2J6a1460&shareUid=3473766&shareFrom=com.coolapk.market_14.6.0">点击查看</a></p>
+<hr>
 
                 
               </div>
@@ -392,8 +442,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程</div>
-      <div>https://moranwp.eu.org/save-brick.html</div>
+      <div>使用avbtool 为Android 镜像签名以启动主线Linux</div>
+      <div>https://moranwp.eu.org/avbtool.html</div>
     </div>
     <div class="license-meta">
       
@@ -405,7 +455,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月2日</div>
+          <div>2025年9月21日</div>
         </div>
       
       
@@ -437,18 +487,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/avbtool.html" title="使用avbtool 为Android 镜像签名以启动主线Linux">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">使用avbtool 为Android 镜像签名以启动主线Linux</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/build-magisk-suu.html" title="记录一下怎么修改”timesu”面具（suu同理）">
-                        <span class="hidden-mobile">记录一下怎么修改”timesu”面具（suu同理）</span>
+                      <a href="/save-brick.html" title="记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程">
+                        <span class="hidden-mobile">记录一次乱安装systemui导致的黑屏无法正常使用的救砖过程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
