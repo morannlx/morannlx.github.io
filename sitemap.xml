@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moranwp.eu.org/writing-device-tree-twrp.html</loc>
+    
+    <lastmod>2025-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moranwp.eu.org/avbtool.html</loc>
     
     <lastmod>2025-09-21</lastmod>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://moranwp.eu.org/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,21 +111,28 @@
   
   <url>
     <loc>https://moranwp.eu.org/tags/%E5%B9%B2%E8%B4%A7/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moranwp.eu.org/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moranwp.eu.org/tags/%E5%88%B7%E6%9C%BA/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://moranwp.eu.org/tags/twrp/</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -125,21 +141,21 @@
   
   <url>
     <loc>https://moranwp.eu.org/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moranwp.eu.org/categories/%E5%88%B7%E6%9C%BA%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moranwp.eu.org/categories/object-Object/</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
