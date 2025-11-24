@@ -110,6 +110,13 @@
 
   
   <url>
+    <loc>https://moranwp.eu.org/tags/%E5%88%B7%E6%9C%BA/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://moranwp.eu.org/tags/%E5%B9%B2%E8%B4%A7/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -118,13 +125,6 @@
   
   <url>
     <loc>https://moranwp.eu.org/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://moranwp.eu.org/tags/%E5%88%B7%E6%9C%BA/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -140,13 +140,6 @@
 
   
   <url>
-    <loc>https://moranwp.eu.org/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://moranwp.eu.org/categories/%E5%88%B7%E6%9C%BA%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -155,6 +148,13 @@
   
   <url>
     <loc>https://moranwp.eu.org/categories/object-Object/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://moranwp.eu.org/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
